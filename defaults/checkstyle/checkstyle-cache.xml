@@ -6,6 +6,7 @@
     <module name="TreeWalker">
         <property name="tabWidth" value="4"/>
         <module name="JavadocMethod">
+            <property name="severity" value="error"/>
             <property name="scope" value="public" />
             <property name="allowMissingPropertyJavadoc" value="true" />
         </module>
@@ -15,42 +16,71 @@
             <property name="allowMultipleEmptyLines" value="false"/>
             <property name="allowMultipleEmptyLinesInsideClassMembers" value="false"/>
         </module>
-        <module name="AnnotationLocation"/>
-        <module name="OneTopLevelClass"/>
+        <module name="AnnotationLocation">
+            <property name="severity" value="error"/>
+        </module>
+        <module name="OneTopLevelClass">
+            <property name="severity" value="error"/>
+        </module>
         <module name="DeclarationOrder">
+            <property name="severity" value="error">
             <property name="ignoreModifiers" value="true"/>
         </module>
-        <module name="MissingDeprecated"/>
-        <module name="MultipleStringLiterals">
-            <property name="allowedDuplicates" value="2"/>
+        <module name="MissingDeprecated">
+            <property name="severity" value="error"/>
+        </module>
+        <module name="MultipleStringLiterals"> <!-- By default ignores annotations -->
+            <property name="severity" value="error"/>
         </module>
         <module name="AtclauseOrder"/>
         <module name="NonEmptyAtclauseDescription"/>
         <module name="InterfaceTypeParameterName"/>
-        <module name="MissingOverride"/>
-        <module name="ConstantName"/>
-        <module name="LocalVariableName"/>
-        <module name="LocalFinalVariableName"/>
-        <module name="MemberName"/>
+        <module name="MissingOverride">
+            <property name="severity" value="error"/>
+        </module>
+        <module name="ConstantName">
+            <property name="severity" value="error"/>
+        </module>
+        <module name="LocalVariableName">
+            <property name="severity" value="error"/>
+        </module>
+        <module name="LocalFinalVariableName">
+            <property name="severity" value="error"/>
+        </module>
+        <module name="MemberName"> 
+            <property name="severity" value="error"/>
+        </module>
         <module name="MethodName"/>
         <module name="PackageName">
+            <property name="severity" value="error"/>
             <property name="format" value="^[a-z]+(\.[a-z_][a-z0-9_]*)*$"/>
         </module>
-        <module name="ParameterName"/>
-        <module name="StaticVariableName"/>
-        <module name="TypeName"/>
-        <module name="AvoidStarImport"/>
-        <module name="IllegalImport"/>
-        <module name="RedundantImport"/>
+        <module name="ParameterName">
+            <property name="severity" value="error"/>
+        </module>
+        <module name="StaticVariableName">
+            <property name="severity" value="error"/>
+        </module>
+        <module name="TypeName">
+            <property name="severity" value="error"/>
+        </module>
+        <module name="AvoidStarImport">
+            <property name="severity" value="error"/>
+        </module>
+        <module name="IllegalImport">
+            <property name="severity" value="error">
+            <property name="illegalPkgs" value="sun, android.util.Log, framework.junit, javax.annotation"/> <!-- TODO -->
+        </module>
         <module name="UnusedImports">
+            <property name="severity" value="error">
             <property name="processJavadoc" value="true" />
         </module>
         <module name="AnonInnerLength">
-            <property name="max" value="25"/>
+            <property name="max" value="40"/>
         </module>
         <module name="LineLength">
             <property name="severity" value="warning"/>
-            <property name="max" value="120"/>
+            <property name="max" value="150"/>
         </module>
         <module name="MethodLength">
             <property name="max" value="80"/>
@@ -58,26 +88,45 @@
         <module name="OuterTypeNumber"/>
         <module name="EmptyForInitializerPad"/>
         <module name="OperatorWrap"/>
-        <module name="LeftCurly"/>
-        <module name="NeedBraces"/>
-        <module name="RightCurly"/>
+        <module name="LeftCurly">
+            <property name="severity" value="error">
+        </module>
+        <module name="NeedBraces">
+            <property name="severity" value="error">
+        </module>
+        <module name="RightCurly">
+            <property name="severity" value="error">
+        </module>
         <module name="CovariantEquals"/>
-<!--        <module name="DoubleCheckedLocking"/>-->
         <module name="EmptyStatement"/>
-	<module name="EqualsAvoidNull"/>
-	<module name="EqualsHashCode"/>
+        <module name="EqualsAvoidNull">
+            <property name="severity" value="error">
+        </module>
+        <module name="EqualsHashCode">
+            <property name="severity" value="error">
+        </module>
         <module name="FallThrough"/>
-	<module name="MagicNumber">
+        <module name="MagicNumber">
+            <property name="severity" value="error">
             <property name="ignoreAnnotation" value="true"/>
         </module>
-	<module name="InterfaceIsType"/>
-        <module name="PackageDeclaration"/>
-        <module name="StringLiteralEquality"/>
-        <module name="SuperClone"/>
-        <module name="SuperFinalize"/>
+        <module name="InterfaceIsType"/>
+        <module name="PackageDeclaration">
+            <property name="severity" value="error">
+        </module>
+        <module name="StringLiteralEquality">
+            <property name="severity" value="error">
+        </module>
+        <module name="SuperClone">
+            <property name="severity" value="error">
+        </module>
+        <module name="SuperFinalize">
+            <property name="severity" value="error">
+        </module>
         <module name="ArrayTrailingComma"/>
-        <module name="OneStatementPerLine"/>
-        <module name="HideUtilityClassConstructor"/>
+        <module name="OneStatementPerLine">
+            <property name="severity" value="error">
+        </module>
         <module name="MutableException"/>
         <module name="NPathComplexity"/>
         <module name="CyclomaticComplexity"/>
@@ -90,7 +139,7 @@
         <module name="EmptyForIteratorPad"/>
         <module name="MethodParamPad"/>
         <module name="ParenPad"/>
-        <module name="WhitespaceAround">
+        <module name="WhitespaceAround"> ⇒ Error
             <property name="ignoreEnhancedForColon" value="false"/>
         </module>
         <module name="ArrayTypeStyle"/>
@@ -101,7 +150,7 @@
             <property name="caseIndent" value="0"/>
             <property name="lineWrappingIndentation" value="1"/>
         </module>
-        <module name="OuterTypeFilename"/>
+        <module name="OuterTypeFilename"/> ⇒ Error
         <module name="EmptyBlock">
             <property name="option" value="text"/>
         </module>
@@ -115,7 +164,6 @@
             <property name="tokens" value="METHOD_DEF,CTOR_DEF,LITERAL_CATCH,FOR_EACH_CLAUSE"/>
         </module>
         <module name="FinalClass"/>
-        <module name="HideUtilityClassConstructor"/>
         <module name="ModifierOrder"/>
         <module name="RedundantModifier"/>
         <module name="SimplifyBooleanExpression"/>
