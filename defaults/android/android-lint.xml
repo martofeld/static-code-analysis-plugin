@@ -49,18 +49,18 @@
     <issue id="MergeRootFrame" severity="error"/>
     <issue id="NestedWeights" severity="error"/>
     <issue id="ObsoleteLayoutParam" severity="error"/>
-    <issue id="Overdraw" severity="warning"/> <!-- Probar que tan bardero es como error -->
+    <issue id="Overdraw" severity="warning"/>
     <issue id="Recycle" severity="error"/>
     <issue id="TooDeepLayout" severity="error"/>
     <issue id="TooManyViews" severity="error"/>
     <issue id="UnusedIds" severity="error"/>
     <issue id="UnusedNamespace" severity="error"/>
     <issue id="UnusedResources" severity="error">
-        
+        <ignore regexp="The resource R.raw..*_dynamic.* appears to be unused"/>
     </issue>
     <issue id="UseCompoundDrawables" severity="warning"/>
     <issue id="UselessLeaf" severity="error"/>
-    <issue id="UselessParent" severity="warning"/> <!-- Probar que tan bardero es como error -->
+    <issue id="UselessParent" severity="warning"/>
     <issue id="UseSparseArrays" severity="error"/>
     <issue id="UseValueOf" severity="error"/>
     <issue id="ViewHolder" severity="error"/>
@@ -85,7 +85,7 @@
     <issue id="TextFields" severity="error"/>
     <issue id="ViewConstructor" severity="error"/>
 
-    <!-- Accessibility → <!-- Empezar a tocar el tema de accesibility -->
+    <!-- Accessibility -->
     <issue id="ClickableViewAccessibility" severity="warning"/>
     <issue id="ContentDescription" severity="warning"/>
 
