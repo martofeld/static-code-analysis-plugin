@@ -17,6 +17,7 @@
 
             <!-- We will use PMD since its faster -->
             <Bug pattern="FORBIDDEN_SYSTEM" />
+            <Bug pattern="LEST_LOST_EXCEPTION_STACK_TRACE"/>
             
             <Bug pattern="SF_SWITCH_NO_DEFAULT" />
         </Or>
